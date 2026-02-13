@@ -1,0 +1,53 @@
+
+# Build outputs
+bin/
+obj/
+out/
+build/
+publish/
+
+# NuGet packages
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Test results
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# NuGet cache
+.nuget/
+
+# Build logs
+*.log
+*.tmp
+
+# Local development files
+appsettings.Development.json
+appsettings.Local.json
+
+# Temporary files
+*.tmp
+*.temp
+
+# planning
+PLANS/

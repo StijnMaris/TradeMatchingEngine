@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TradeMatchingEngine.Console/TradeMatchingEngine.Console.csproj" />
+    <Project Path="src/TradeMatchingEngine.Domain/TradeMatchingEngine.Domain.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TradeMatchingEngine.Tests/TradeMatchingEngine.Tests.csproj" />
+  </Folder>
+</Solution>
