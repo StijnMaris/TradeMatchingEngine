@@ -1,5 +1,5 @@
 
-using TradeMatchingEngine.Domain;
+namespace TradeMatchingEngine.Domain.Models;
 
 public record Trade
 (

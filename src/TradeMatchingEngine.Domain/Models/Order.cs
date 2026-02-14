@@ -1,6 +1,7 @@
 
-using TradeMatchingEngine.Domain;
+using TradeMatchingEngine.Domain.Enums;
 
+namespace TradeMatchingEngine.Domain.Models;
 public record Order
 (
     Guid id,

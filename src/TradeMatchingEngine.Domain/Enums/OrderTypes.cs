@@ -1,4 +1,5 @@
-namespace TradeMatchingEngine.Domain;
+
+namespace TradeMatchingEngine.Domain.Enums;
 
 public enum OrderType
 {
