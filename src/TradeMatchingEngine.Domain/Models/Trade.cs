@@ -1,11 +1,12 @@
 
 using TradeMatchingEngine.Domain;
 
-public record Order
+public record Trade
 (
     Guid id,
-    OrderType orderType,
-    decimal price,
+    Guid buyOrderId,
+    Guid sellOrderId,
     decimal quantity,
+    decimal price,
     DateTime timestamp
 );
