@@ -8,6 +8,9 @@ public class MatchingEngine
 {  
     private readonly OrderBook orderBook = new OrderBook();
 
+    public IReadOnlyList<Order> BuyOrders => orderBook.buyOrderRecord.ToList().AsReadOnly();
+    public IReadOnlyList<Order> SellOrders => orderBook.sellOrderRecord.ToList().AsReadOnly();
+
     private List<Trade> tradeRecord { get; } = new List<Trade>();
 
     public IReadOnlyList<Trade> TradeHistory => tradeRecord.AsReadOnly();
