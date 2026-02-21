@@ -48,16 +48,16 @@ public class MatchingEngine
                 orderBook.CancelOrder(bestSellOrder);
                 bestSellOrder = orderBook.GetBestSellOrder();
             }
-            else if (buyOrder.quantity == tradeQuantity)
+            else if (bestSellOrder.quantity > tradeQuantity)
+            {
+                buyOrder.Clear();
+                bestSellOrder.Fill(tradeQuantity);
+            } 
+            else
             {
                 buyOrder.Clear();
                 orderBook.CancelOrder(bestSellOrder);
             }
-            else
-            {
-                buyOrder.Clear();
-                bestSellOrder.Fill(tradeQuantity);
-            }    
         }
 
         if(!buyOrder.IsEmpty())
@@ -85,16 +85,16 @@ public class MatchingEngine
                 orderBook.CancelOrder(bestBuyOrder);
                 bestBuyOrder = orderBook.GetBestBuyOrder();
             }
-            else if (sellOrder.quantity == tradeQuantity)
+            else if (bestBuyOrder.quantity > tradeQuantity)
+            {
+                sellOrder.Clear();
+                bestBuyOrder.Fill(tradeQuantity);
+            }  
+            else
             {
                 sellOrder.Clear();
                 orderBook.CancelOrder(bestBuyOrder);
             }
-            else
-            {
-                sellOrder.Clear();
-                bestBuyOrder.Fill(tradeQuantity);
-            }    
         }
 
         if(!sellOrder.IsEmpty())
